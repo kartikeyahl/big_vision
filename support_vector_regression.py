@@ -7,7 +7,7 @@ import pandas as pd
 
 # Importing the dataset
 dataset = pd.read_csv('Position_Salaries.csv')                  #endpoint 1(input of .csv file)
-X = dataset.iloc[:, 1:-1].values
+X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 l=len(X[1,:])
 
@@ -23,5 +23,5 @@ for i in range(0, l):
     lst.append(ele)   
 
 # Predicting a new result
-y_pred=sc_y.inverse_transform(regressor.predict(sc_X.transform([lst])))
+y_pred= regressor.predict([lst])
 print(y_pred)                                      #endpoint 3(output)
