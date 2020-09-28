@@ -14,10 +14,6 @@ l=len(X[1,:])
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-print(X_train)
-print(y_train)
-print(X_test)
-print(y_test)
 
 # Training the Decision Tree Classification model on the Training set
 from sklearn.tree import DecisionTreeClassifier
