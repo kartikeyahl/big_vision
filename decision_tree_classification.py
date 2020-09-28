@@ -27,5 +27,5 @@ for i in range(0, l):
     lst.append(ele) 
 
 # Predicting a new result
-y_pred= classifier.predict([lst]))
+y_pred= classifier.predict([lst])
 print(y_pred)                                      #endpoint 3(output)
