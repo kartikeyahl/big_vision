@@ -28,4 +28,4 @@ for i in range(0, l):
 
 # Predicting a new result
 y_pred=regressor.predict([lst])                           
-print(y_pred)                               #endpoint 2(output)
+print(y_pred)                               #endpoint 3(output)
