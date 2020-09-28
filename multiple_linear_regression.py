@@ -6,17 +6,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('50_Startups.csv')
+dataset = pd.read_csv('50_Startups.csv')              #endpoint 1(input of .csv file)
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
-print(X)
-
-# Encoding categorical data
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
-ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remainder='passthrough')
-X = np.array(ct.fit_transform(X))
-print(X)
+l=len(X[1,:])
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -27,7 +20,12 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
-# Predicting the Test set results
-y_pred = regressor.predict(X_test)
-np.set_printoptions(precision=2)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+#taking user input for prediction
+lst=[]
+for i in range(0, l):                           
+    ele = float(input())                    #endpoint 2(taking user input values)
+    lst.append(ele)
+
+# Predicting a new result
+y_pred=regressor.predict([lst])                           
+print(y_pred)                               #endpoint 2(output)
