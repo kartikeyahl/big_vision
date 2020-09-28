@@ -19,9 +19,9 @@ regressor.fit(X, y)
 #taking user input for prediction
 lst=[]
 for i in range(0, l):                           
-    ele = float(input("i/p :"))                    #endpoint 2(taking user input values)
+    ele = float(input())                          #endpoint 2(taking user input values)
     lst.append(ele)                       
 
 # Predicting a new result
-regressor.predict([lst])                           #endpoint 2(output)
-
+y_pred=regressor.predict([lst])                         
+print(y_pred)                                      #endpoint 2(output)
