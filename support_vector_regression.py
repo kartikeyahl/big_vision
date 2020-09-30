@@ -9,6 +9,16 @@ import pandas as pd
 dataset = pd.read_csv('Position_Salaries.csv')                  #endpoint 1(input of .csv file)
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
+y = y.reshape(len(y),1)
+
+
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+sc_y = StandardScaler()
+X = sc_X.fit_transform(X)
+y = sc_y.fit_transform(y)
+
 l=len(X[1,:])
 
 # Training the SVR model on the whole dataset
@@ -23,5 +33,5 @@ for i in range(0, l):
     lst.append(ele)   
 
 # Predicting a new result
-y_pred= regressor.predict([lst])
+y_pred= sc_y.inverse_transform(regressor.predict(sc_X.transform([lst])))
 print(y_pred)                                      #endpoint 3(output)
