@@ -56,5 +56,5 @@ for i in range(0, l):
     lst.append(ele)  
     
 # Predicting the Test set results
-y_pred=ann.predict(sc.transform([lst]))
+y_pred=ann.predict_classes(sc.transform([lst]))
 print(y_pred)                                      #endpoint 3(output)
