@@ -17,13 +17,13 @@ train_datagen = ImageDataGenerator(rescale = 1./255,
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
 # Creating the Training set
-training_set = train_datagen.flow_from_directory('train',
+training_set = train_datagen.flow_from_directory('train',                      #endpoint 1(input training set images)
                                                  target_size = (64, 64),
                                                  batch_size = 32,
                                                  class_mode = 'binary')
 
 # Creating the Test set
-test_set = test_datagen.flow_from_directory('test',
+test_set = test_datagen.flow_from_directory('test',                           #endpoint 2(input test set images)
                                             target_size = (64, 64),
                                             batch_size = 32,
                                             class_mode = 'binary')
@@ -69,10 +69,10 @@ import numpy as np
  
 from keras.preprocessing import image
  
-test_image = image.load_img('chest_xray/test/NORMAL/IM-0009-0001.jpeg', target_size = (64, 64))                  #endpoint 1(taking user input picture)
+test_image = image.load_img('chest_xray/test/NORMAL/IM-0009-0001.jpeg', target_size = (64, 64))                  #endpoint 3(taking user input picture)
  
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = cnn.predict(test_image)
 training_set.class_indices
-print(result)                                                                                                     #endpoint 2(output)
+print(result)                                                                                                     #endpoint 4(output)
