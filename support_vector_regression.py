@@ -11,6 +11,11 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 y = y.reshape(len(y),1)
 
+# Taking care of missing data
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+imputer.fit(X[:, :])
+X[:, :] = imputer.transform(X[:, :])
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
