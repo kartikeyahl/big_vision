@@ -11,6 +11,12 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 l=len(X[1,:])
 
+# Taking care of missing data
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+imputer.fit(X[:, :])
+X[:, :] = imputer.transform(X[:, :])
+
 # Training the Random Forest Regression model on the whole dataset
 from sklearn.ensemble import RandomForestRegressor
 regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)
