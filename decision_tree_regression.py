@@ -7,7 +7,7 @@ import pandas as pd
 
 # Importing the dataset
 dataset = pd.read_csv('Position_Salaries.csv')    #endpoint 1(input of .csv file for model training)
-X = dataset.iloc[:, 1:-1].values
+X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
 # Taking care of missing data
