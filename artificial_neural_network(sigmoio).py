@@ -10,7 +10,7 @@ tf.__version__
 
 # Importing the dataset
 dataset = pd.read_csv('Churn_Modelling.csv')               #endpoint 1(input of .csv file)
-X = dataset.iloc[:, 3:-1].values
+X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 l=len(X[1,:])
 p=(l+1)/2
@@ -20,6 +20,8 @@ from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer.fit(X[:, :])
 X[:, :] = imputer.transform(X[:, :])
+
+lst = pd.read_csv('to_predict.csv')                       #endpoint 2(input of .csv file for prediction)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -52,15 +54,7 @@ ann.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accura
 
 # Training the ANN on the Training set
 ann.fit(X_train, y_train, batch_size = 32, epochs = 100)
-
-# Part 4 - Making the predictions and evaluating the model
-
-#taking user input for prediction
-lst=[]
-for i in range(0, l):                           
-    ele = float(input())                          #endpoint 2(taking user input values)
-    lst.append(ele)  
     
 # Predicting the Test set results
-y_pred=ann.predict_classes(sc.transform([lst]))
-print(y_pred)                                      #endpoint 3(output)
+ann.predict_classes(sc.transform(lst))                             #endpoint 3(output)
+        
