@@ -10,6 +10,12 @@ dataset = pd.read_csv('Position_Salaries.csv')    #endpoint 1(input of .csv file
 X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 
+# Taking care of missing data
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+imputer.fit(X[:, :])
+X[:, :] = imputer.transform(X[:, :])
+
 lst = pd.read_csv('to_predict.csv')    #endpoint 2(input of .csv file for prediction)
 
 
