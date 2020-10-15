@@ -6,28 +6,17 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('Position_Salaries.csv')     #endpoint 1(input of .csv file)
-X = dataset.iloc[:, :-1].values
+dataset = pd.read_csv('Position_Salaries.csv')    #endpoint 1(input of .csv file for model training)
+X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
-l=len(X[1,:])
 
-# Taking care of missing data
-from sklearn.impute import SimpleImputer
-imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-imputer.fit(X[:, :])
-X[:, :] = imputer.transform(X[:, :])
+lst = pd.read_csv('to_predict.csv')    #endpoint 2(input of .csv file for prediction)
+
 
 # Training the Decision Tree Regression model on the whole dataset
 from sklearn.tree import DecisionTreeRegressor
 regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X, y)
 
-#taking user input for prediction
-lst=[]
-for i in range(0, l):                           
-    ele = float(input())                          #endpoint 2(taking user input values)
-    lst.append(ele)                       
-
 # Predicting a new result
-y_pred=regressor.predict([lst])                         
-print(y_pred)                                      #endpoint 3(output)
+regressor.predict(lst)         #endpoint 3(output)
