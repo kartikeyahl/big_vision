@@ -34,5 +34,5 @@ classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
 classifier.fit(X_train, y_train)
 
 # Predicting a new result
-classifier.predict(sc.transform([lst]))         #endpoint 3(output)
+classifier.predict(sc.transform(lst))         #endpoint 3(output)
                                     
