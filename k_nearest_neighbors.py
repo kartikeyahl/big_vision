@@ -9,13 +9,14 @@ import pandas as pd
 dataset = pd.read_csv('Social_Network_Ads.csv')                #endpoint 1(input of .csv file)
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
-l=len(X[1,:])
 
 # Taking care of missing data
 from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer.fit(X[:, :])
 X[:, :] = imputer.transform(X[:, :])
+
+lst = pd.read_csv('to_predict.csv')        #endpoint 2(input of .csv file for prediction)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -32,12 +33,6 @@ from sklearn.neighbors import KNeighborsClassifier
 classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
 classifier.fit(X_train, y_train)
 
-#taking user input for prediction
-lst=[]
-for i in range(0, l):                           
-    ele = float(input())                          #endpoint 2(taking user input values)
-    lst.append(ele) 
-
 # Predicting a new result
-y_pred=classifier.predict(sc.transform([lst]))
-print(y_pred)                                      #endpoint 3(output)
+classifier.predict(sc.transform([lst]))         #endpoint 3(output)
+                                    
