@@ -34,4 +34,4 @@ classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', ra
 classifier.fit(X_train, y_train)    
 
 # Predicting a new result
-classifier.predict(sc.transform([lst]))     #endpoint 3(output)
+classifier.predict(sc.transform(lst))     #endpoint 3(output)
