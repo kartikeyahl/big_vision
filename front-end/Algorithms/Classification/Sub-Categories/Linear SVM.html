@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../../Images/Logo/icon.png" type="image/x-icon">
+		<title>ML MODELLER | LINEAR SVM</title>
+
+		<!-- CSS Files link-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../css/home.css">
+		
+		<!--JavaScript Files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	</head>
+
+	<body>
+		<!--START OF HOME SECTION-->
+		<div id="home">
+			<!--START OF NAVIGATION BAR-->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="../../../home.html"><img src="../../../Images/Logo/Logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto ">
+						<li class="nav-item">                 
+							<a class="nav-link" href="../../../home.html">Home</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../Classification.html#algorithms">Classification</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Clustering/Clustering.html#algorithms">Clustering</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Deep Learning/Deep Learning.html#algorithms">Deep Learning</a>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Regression/Regression.html#algorithms">Regression</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--END OF NAVIGATION BAR-->
+
+			<!--START OF LANDING PAGE SECTION-->
+			<div class="landing">
+				<div class="home-wrap">
+					<div class="home-inner"></div>
+				</div>
+			</div>
+
+			<div class="caption text-center">
+				<h1>ML Modeller</h1>
+				<h3>Linear SVM Classification</h3>
+			</div>
+			<!--END OF LANDING PAGE SECTION-->
+		</div>
+		<!--END OF HOME SECTION-->
+
+		<div id="description" class="offset">
+			<div class="col-12">
+				<div class="row text-justify box">
+					<div class="col-lg-4 col-md-12">
+						<div class="upload">
+							<form method="post" action="upload.php">
+								<h3>Dataset File</h3>
+								<input type="file" id="datset" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<h3>Input File</h3>
+								<input type="file" id="input" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<input type="submit" name="" value="Upload" class="submit">
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-8 col-md-12">
+						<div class="description">
+							<h1>About Linear SVM Classification</h1>
+							<div class="description-underline"></div>
+							<p>Linear SVM is the newest extremely fast machine learning (data mining) algorithm for solving multiclass classification problems from ultra large data sets that implements an original proprietary version of a cutting plane algorithm for designing a linear support vector machine. LinearSVM is a linearly scalable routine meaning that it creates an SVM model in a CPU time which scales linearly with the size of the training data set.</p>
+
+							<h1>Requirements</h1>
+							<div class="description-underline"></div>
+							<p>If the dataset has more than two classes(dependent variables(y)) and also if data points are linearly separable. Here, we can use Linear SVM.</p>
+						
+							<h1>Applications</h1>
+							<div class="description-underline"></div>
+							<ul>
+								<li><strong>Face detection</strong></li>
+									SVMc classify parts of the image as a face and non-face and create a square boundary around the face.
+								
+								<li><strong>Classification of images</strong></li>
+									Use of SVMs provides better search accuracy for image classification. It provides better accuracy in comparison to the traditional query-based searching techniques.
+
+								<li><strong>Bioinformatics</strong></li>
+									It includes protein classification and cancer classification. We use SVM for identifying the classification of genes, patients on the basis of genes and other biological problems.
+
+								<li><strong>Handwriting recognition</strong></li>
+									We use SVMs to recognize handwritten characters used widely.
+							</ul> 
+
+							<h1>Examples</h1>
+							<div class="description-underline"></div>
+							<img src="../../../Images/Algorithms/Classification/Examples/Linear SVM.png" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<!--START OF CONTACT SECTION-->
+		<div id="contact" class="offset">
+			<footer>
+				<div class="row justify-content-center">
+					<div class="col-md-5 text-center">
+						<img src="../../../Images/Logo/Logo.png">
+						<p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+						<strong>Contact Info</strong>
+						<p>mlmodeller@email.com</p>
+						<a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+					</div>
+					<hr class="socket">
+					&copy; ML Modeller.
+				</div>	 
+			</footer>
+		</div>
+		<!--END OF CONTACT SECTION-->
+	</body>
+</html>

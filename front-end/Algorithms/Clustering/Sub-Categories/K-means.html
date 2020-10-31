@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../../Images/Logo/icon.png" type="image/x-icon">
+		<title>ML MODELLER | k-Means</title>
+
+		<!-- CSS Files link-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../css/home.css">
+		
+		<!--JavaScript Files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	</head>
+
+	<body>
+		<!--START OF HOME SECTION-->
+		<div id="home">
+			<!--START OF NAVIGATION BAR-->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="../../../home.html"><img src="../../../Images/Logo/Logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto ">
+						<li class="nav-item">                 
+							<a class="nav-link" href="../../../home.html">Home</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Classification/Classification.html#algorithms">Classification</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../clustering.html#algorithms">Clustering</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Deep Learning/Deep Learning.html#algorithms">Deep Learning</a>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../regression/regression.html#algorithms">Regression</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--END OF NAVIGATION BAR-->
+
+			<!--START OF LANDING PAGE SECTION-->
+			<div class="landing">
+				<div class="home-wrap">
+					<div class="home-inner"></div>
+				</div>
+			</div>
+
+			<div class="caption text-center">
+				<h1>ML Modeller</h1>
+				<h3>K-Means Clustering</h3>
+			</div>
+			<!--END OF LANDING PAGE SECTION-->
+		</div>
+		<!--END OF HOME SECTION-->
+
+		<div id="description" class="offset">
+			<div class="col-12">
+				<div class="row text-justify box">
+					<div class="col-lg-4 col-md-12">
+						<div class="upload">
+							<form method="post" action="upload.php">
+								<h3>Dataset File</h3>
+								<input type="file" id="datset" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<h3>Input File</h3>
+								<input type="file" id="input" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<input type="submit" name="" value="Upload" class="submit">
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-8 col-md-12">
+						<div class="description">
+							<h1>About k-Means Clustering</h1>
+							<div class="description-underline"></div>
+							<p>It is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster.</p>
+
+							<h1>Requirements</h1>
+							<div class="description-underline"></div>
+							<p></p>
+						
+							<h1>Applications</h1>
+							<div class="description-underline"></div>
+							<ul>
+								<li><strong>Customer Segmentation</strong></li>
+									One of the most common applications of clustering is customer segmentation. This strategy is across functions, including telecom, e-commerce, sports, advertising, sales, etc.
+								<li><strong>Document Clustering</strong></li>
+									This is another common application of clustering. Let’s say you have multiple documents and you need to cluster similar documents together. Clustering helps us group these documents such that similar documents are in the same clusters.
+								<li><strong>Image Segmentation</strong></li>
+									We can also use clustering to perform image segmentation. Here, we try to club similar pixels in the image together. We can apply clustering to create clusters having similar pixels in the same group.
+								<li><strong>Recommendation Engines</strong></li>
+									Clustering can also be used in recommendation engines. Let’s say you want to recommend songs to your friends. You can look at the songs liked by that person and then use clustering to find similar songs and finally recommend the most similar songs.
+							</ul> 
+
+							<h1>Examples</h1>
+							<div class="description-underline"></div>
+							<img src="../../../Images/Algorithms/Clustering/Examples/k-means.png" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<!--START OF CONTACT SECTION-->
+		<div id="contact" class="offset">
+			<footer>
+				<div class="row justify-content-center">
+					<div class="col-md-5 text-center">
+						<img src="../../../Images/Logo/Logo.png">
+						<p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+						<strong>Contact Info</strong>
+						<p>mlmodeller@email.com</p>
+						<a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+					</div>
+					<hr class="socket">
+					&copy; ML Modeller.
+				</div>	 
+			</footer>
+		</div>
+		<!--END OF CONTACT SECTION-->
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../../Images/Logo/icon.png" type="image/x-icon">
+		<title>ML MODELLER | RANDOM FOREST</title>
+
+		<!-- CSS Files link-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../css/home.css">
+		
+		<!--JavaScript Files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	</head>
+
+	<body>
+		<!--START OF HOME SECTION-->
+		<div id="home">
+			<!--START OF NAVIGATION BAR-->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="../../../home.html"><img src="../../../Images/Logo/Logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto ">
+						<li class="nav-item">                 
+							<a class="nav-link" href="../../../home.html">Home</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../Classification.html#algorithms">Classification</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Clustering/clustering.html#algorithms">Clustering</a>
+						</li>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Deep Learning/Deep Learning.html#algorithms">Deep Learning</a>
+						<!-------------------------->
+						<li class="nav-item">
+							<a class="nav-link" href="../../Regression/Regression.html#algorithms">Regression</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--END OF NAVIGATION BAR-->
+
+			<!--START OF LANDING PAGE SECTION-->
+			<div class="landing">
+				<div class="home-wrap">
+					<div class="home-inner"></div>
+				</div>
+			</div>
+
+			<div class="caption text-center">
+				<h1>ML Modeller</h1>
+				<h3>Random Forest Classification</h3>
+			</div>
+			<!--END OF LANDING PAGE SECTION-->
+		</div>
+		<!--END OF HOME SECTION-->
+
+		<div id="description" class="offset">
+			<div class="col-12">
+				<div class="row text-justify box">
+					<div class="col-lg-4 col-md-12">
+						<div class="upload">
+							<form method="post" action="upload.php">
+								<h3>Dataset File</h3>
+								<input type="file" id="datset" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<h3>Input File</h3>
+								<input type="file" id="input" name="" accept=".csv" required="" class="upload-box">
+								<br><br>
+								<input type="submit" name="" value="Upload" class="submit">
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-8 col-md-12">
+						<div class="description">
+							<h1>About Random Forest Classification</h1>
+							<div class="description-underline"></div>
+							<p>Random Forest is a robust machine learning algorithm that can be used for a variety of tasks including regression and classification. It is an ensemble method, meaning that a random forest model is made up of a large number of small decision trees, called estimators, which each produce their own predictions. The random forest model combines the predictions of the estimators to produce a more accurate prediction.</p>
+
+							<h1>Requirements</h1>
+							<div class="description-underline"></div>
+							<p>If large training data is present and nonlinearly distributed, then we can use this decision tree classification method to get more accurate results.</p>
+						
+							<h1>Applications</h1>
+							<div class="description-underline"></div>
+							<ul>
+								<li><strong>Assessing prospective growth opportunities</strong></li>
+									One of the applications of decision trees involves evaluating prospective growth opportunities for businesses based on historical data. Historical data on sales can be used in decision trees that may lead to making radical changes in the strategy of a business to help aid expansion and growth.
+								<li><strong>Using demographic data to find prospective clients</strong></li>
+									Another application of decision trees is in the use of demographic data to find prospective clients. They can help in streamlining a marketing budget and in making informed decisions on the target market that the business is focused on. In the absence of decision trees, the business may spend its marketing market without a specific demographic in mind, which will affect its overall revenues.
+							</ul> 
+
+							<h1>Examples</h1>
+							<div class="description-underline"></div>
+							<img src="../../../Images/Algorithms/Classification/Examples/Random Forest.png" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<!--START OF CONTACT SECTION-->
+		<div id="contact" class="offset">
+			<footer>
+				<div class="row justify-content-center">
+					<div class="col-md-5 text-center">
+						<img src="../../../Images/Logo/Logo.png">
+						<p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+						<strong>Contact Info</strong>
+						<p>mlmodeller@email.com</p>
+						<a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+						<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+					</div>
+					<hr class="socket">
+					&copy; ML Modeller.
+				</div>	 
+			</footer>
+		</div>
+		<!--END OF CONTACT SECTION-->
+	</body>
+</html>
